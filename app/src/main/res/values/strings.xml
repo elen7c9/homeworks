@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Homeworks</string>
+
+    <string name="str1">First string</string>
+    <string name="str2">Second string</string>
+    <string name="temp"></string>
+</resources>
