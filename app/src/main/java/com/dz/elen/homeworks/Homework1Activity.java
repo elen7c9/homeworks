@@ -1,5 +1,6 @@
 package com.dz.elen.homeworks;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,8 +33,16 @@ public class Homework1Activity extends AppCompatActivity implements View.OnClick
             }
         });
 
-
         textView1.setOnClickListener(this);
+
+        Button btnBack = (Button) findViewById(R.id.btnBack1);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homework1Activity.this, StartActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     public void clickStr2(View view){
