@@ -3,10 +3,22 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
     <color name="colorYellow">#ffee00</color>
     <color name="colorGreen">#73f706</color>
 
+
+    <color name="austriaRed">#DC1E04</color>
+
+    <color name="italyGreen">#048E44</color>
+    <color name="italyRed">#D4222C</color>
+
     <color name="Red">#ff0000</color>
     <color name="White">#ffffff</color>
+    
+    <color name="columbiaYellow">#FCD214</color>
+    <color name="columbiaBlue">#043A94</color>
+    <color name="columbiaRed">#CC1224</color>
+
+    <color name="madagaskarRed">#FC3E34</color>
+    <color name="madagaskarGreen">#047E3C</color>
 </resources>
