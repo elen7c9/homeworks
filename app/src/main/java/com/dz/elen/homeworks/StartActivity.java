@@ -30,5 +30,14 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btnHomework3 = (Button) findViewById(R.id.btnHomework3);
+        btnHomework3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, Homework3Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

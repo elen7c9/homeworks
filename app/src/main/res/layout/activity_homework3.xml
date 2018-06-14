@@ -4,31 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
-
+    tools:context=".Homework3Activity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <Button
-            android:id="@+id/btnHomework1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/imgUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HOMEWORK 1" />
-
+            android:hint="Paste here your URL"
+            android:inputType="textUri"
+            />
         <Button
-            android:id="@+id/btnHomework2"
+            android:id="@+id/btnLoad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HOMEWORK 2" />
+            android:text="@string/load"/>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
         <Button
-            android:id="@+id/btnHomework3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HOMEWORK 3" />
+            android:id="@+id/btnBack3"
+            android:text="@string/back"/>
+
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
