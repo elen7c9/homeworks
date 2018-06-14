@@ -10,7 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import android.app.Activity;
+
+import com.squareup.leakcanary.LeakCanary;
 import com.squareup.picasso.Picasso;
+
 
 public class Homework3Activity extends AppCompatActivity {
 
@@ -18,9 +22,16 @@ public class Homework3Activity extends AppCompatActivity {
     Button btn;
     Button btnBack;
     EditText url;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return;
+        }
+       LeakCanary.install(getApplication());
+
         setContentView(R.layout.activity_homework3);
 
         img = (ImageView) findViewById(R.id.img);
@@ -46,4 +57,5 @@ public class Homework3Activity extends AppCompatActivity {
         });
 
     }
+
 }

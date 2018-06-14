@@ -13,6 +13,7 @@
             android:id="@+id/imgUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="https://www.tampereclub.ru/uploads/posts/2013-09/1379358270_hello_kitty.jpg"
             android:hint="Paste here your URL"
             android:inputType="textUri"
             />
