@@ -19,6 +19,7 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, Homework1Activity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.mycombo,R.anim.myalpha);
             }
         });
 
@@ -28,6 +29,7 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, Homework2Activity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.myscale,R.anim.myalpha);
             }
         });
 
@@ -37,6 +39,17 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, Homework3Activity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.mytrans,R.anim.myalpha);
+            }
+        });
+
+        Button btnHomework4_1 = (Button) findViewById(R.id.btnHomework4_1);
+        btnHomework4_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, Homework4_1Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.myscale,R.anim.myalpha);
             }
         });
     }

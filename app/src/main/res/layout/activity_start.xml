@@ -30,5 +30,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HOMEWORK 3" />
+        <Button
+            android:id="@+id/btnHomework4_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOMEWORK 4 SOVA" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

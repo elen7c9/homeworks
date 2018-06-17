@@ -27,11 +27,6 @@ public class Homework3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            return;
-        }
-       LeakCanary.install(getApplication());
-
         setContentView(R.layout.activity_homework3);
 
         img = (ImageView) findViewById(R.id.img);
