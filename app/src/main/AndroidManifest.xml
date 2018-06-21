@@ -23,7 +23,8 @@
         <activity android:name=".Homework2Activity" />
         <activity android:name=".Homework3Activity" />
         <activity android:name=".Homework4_1Activity" />
-        <activity android:name=".Homework4_2Activity"></activity>
+        <activity android:name=".Homework4_2Activity" />
+        <activity android:name=".Homework4_3Activity"></activity>
     </application>
 
 </manifest>

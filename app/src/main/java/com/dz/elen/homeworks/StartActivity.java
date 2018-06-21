@@ -62,5 +62,15 @@ public class StartActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.myscale,R.anim.myalpha);
             }
         });
+
+        Button btnHomework4_3 = (Button) findViewById(R.id.btnHomework4_3);
+        btnHomework4_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, Homework4_3Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.myscale,R.anim.myalpha);
+            }
+        });
     }
 }

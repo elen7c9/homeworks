@@ -16,7 +16,6 @@ public class Homework4_1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homework4_1);
 
-
         iv_sova=(ImageView)findViewById(R.id.iv_sova);
         iv_sova.setBackgroundResource(R.drawable.sova_animation);
         final AnimationDrawable progressAnimation =(AnimationDrawable)iv_sova.getBackground();

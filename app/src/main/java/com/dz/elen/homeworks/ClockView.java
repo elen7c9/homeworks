@@ -5,14 +5,18 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.graphics.drawable.AnimationDrawable;
 import android.view.View;
+import android.widget.ImageView;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 public class ClockView extends View {
+
 
 
     public ClockView(Context context) {
@@ -59,19 +63,16 @@ public class ClockView extends View {
         float minDegrees = 0;
 
 
-        Calendar c = Calendar.getInstance();
-        c.setTimeZone(TimeZone.getTimeZone("GMT+4"));
-        int hour = c.get(Calendar.HOUR_OF_DAY); //24
-        int min = c.get(Calendar.MINUTE); //60
+        Date now = new Date();
+        SimpleDateFormat sdfHour = new SimpleDateFormat("h");
+        String formattedTimeHour = sdfHour.format(now);
+        int hour = Integer.parseInt(formattedTimeHour);
 
+        SimpleDateFormat sdfMin = new SimpleDateFormat("m");
+        String formattedTimeMin = sdfMin.format(now);
+        int min = Integer.parseInt(formattedTimeMin);
 
-        /*Calendar rightNow = Calendar.getInstance();
-        rightNow.setTimeZone(TimeZone.getTimeZone("GMT+4"));
-        double hour = rightNow.get(Calendar.HOUR_OF_DAY);
-        double minute = rightNow.get(Calendar.MINUTE);*/
-
-
-        hourDegrees = (float) (360.0/24.0*(hour));
+        hourDegrees = (float) (360.0/12.0*(hour));
         minDegrees = (float) (360.0/60.0*min);
 
         System.out.print(hourDegrees);
@@ -79,9 +80,12 @@ public class ClockView extends View {
 
         canvas.rotate((float) hourDegrees, getWidth()/2, getHeight()/2);
         canvas.drawLine(getWidth()/2,getHeight()/2, getWidth()/2,getHeight()/2-100,paintRound);
+        canvas.restore();
 
-        canvas.rotate((float) minDegrees-30, getWidth()/2, getHeight()/2);
+        canvas.rotate((float) minDegrees, getWidth()/2, getHeight()/2);
         canvas.drawLine(getWidth()/2,getHeight()/2, getWidth()/2,getHeight()/2-200,paintRound);
 
+
     }
+
 }
