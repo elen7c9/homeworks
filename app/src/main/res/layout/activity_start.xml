@@ -45,5 +45,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HOMEWORK 4 PIE CHART" />
+        <Button
+            android:id="@+id/btnHomework5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOMEWORK 5" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
