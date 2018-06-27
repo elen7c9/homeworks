@@ -6,16 +6,29 @@
     android:layout_height="match_parent"
     tools:context="com.dz.elen.homeworks.Homework5Activity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
 
-        <TextView
-            android:id="@+id/wifiState"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:constraintBottom_toBottomOf="parent"
-            tools:constraintLeft_toLeftOf="parent"
-            tools:constraintRight_toRightOf="parent"
-            tools:constraintTop_toTopOf="parent"
-            />
+    <TextView
+        android:id="@+id/wifiState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:onClick="onClick"
+        android:layout_height="wrap_content"
+        android:text="change wifi state"
+        android:id="@+id/btnWifiState"
+        />
+</LinearLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

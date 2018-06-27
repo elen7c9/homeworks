@@ -28,6 +28,9 @@
         <activity android:name=".Homework4_2Activity" />
         <activity android:name=".Homework4_3Activity" />
         <activity android:name=".Homework5Activity"></activity>
+
+        <service android:name=".MyService"/>
+
     </application>
 
 </manifest>
