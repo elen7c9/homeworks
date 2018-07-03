@@ -5,15 +5,15 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.util.AttributeSet;
 import android.view.View;
 
 public class PieChartView extends View {
 
+
     Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
     float[] value_degree;
     int[] COLORS={Color.BLUE,Color.GREEN,Color.RED,Color.CYAN,Color.RED};
-
-
 
     public PieChartView(Context context, float[] values) {
         super(context);

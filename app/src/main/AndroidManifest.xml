@@ -16,21 +16,25 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Homework1Activity" />
         <activity android:name=".StartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Homework2Activity" />
         <activity android:name=".Homework3Activity" />
         <activity android:name=".Homework4_1Activity" />
         <activity android:name=".Homework4_2Activity" />
         <activity android:name=".Homework4_3Activity" />
-        <activity android:name=".Homework5Activity"></activity>
+        <activity android:name=".Homework5Activity" />
 
-        <service android:name=".MyService"/>
+        <service android:name=".MyService" />
 
+        <activity android:name=".Homework6.ListOfStudentsActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

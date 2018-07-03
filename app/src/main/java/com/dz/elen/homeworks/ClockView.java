@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.AnimationDrawable;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -17,7 +18,13 @@ import java.util.TimeZone;
 
 public class ClockView extends View {
 
+    public ClockView (Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
 
+    public ClockView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
     public ClockView(Context context) {
         super(context);

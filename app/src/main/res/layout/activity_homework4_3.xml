@@ -6,13 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.dz.elen.homeworks.Homework4_3Activity">
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+
         <com.dz.elen.homeworks.PieChartView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </com.dz.elen.homeworks.PieChartView>
-    </LinearLayout>
+            android:layout_height="wrap_content"/>
+
 </android.support.constraint.ConstraintLayout>

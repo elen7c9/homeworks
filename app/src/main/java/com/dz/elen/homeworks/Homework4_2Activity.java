@@ -10,8 +10,6 @@ public class Homework4_2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new ClockView(this));
-
-
+        setContentView(R.layout.activity_homework4_2);
     }
 }
