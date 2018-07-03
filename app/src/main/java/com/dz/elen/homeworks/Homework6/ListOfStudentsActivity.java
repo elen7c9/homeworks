@@ -31,6 +31,7 @@ public class ListOfStudentsActivity extends AppCompatActivity {
 
         adapter = new StudentAdapter(students,this);
         studentsRecyclerView.setAdapter(adapter);
+
     }
 
 }

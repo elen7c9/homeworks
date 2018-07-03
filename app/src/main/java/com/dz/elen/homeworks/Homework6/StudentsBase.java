@@ -11,13 +11,16 @@ public class StudentsBase {
 
     private StudentsBase() {
         students = new ArrayList<>();
-        for (int i = 0; i<100; i++){
-           Student student = new Student();
-           student.setName("Иванова Анна Михайловна");
-           student.setMail("ann@gmail.com");
-           student.setImage(R.drawable.img_student);
-           students.add(student);
-        }
+        students.add(new Student("Иванова Анна Михайловна", "ann.ivanova@gmail.com",R.drawable.img_student1));
+        students.add(new Student("Петров Сергей Андреевич", "serg512@gmail.com",R.drawable.img_student2));
+        students.add(new Student("Жук Полина Ивановна", "zhuk.polina@gmail.com",R.drawable.img_student3));
+        students.add(new Student("Сенько Артем Петрович", "artem831@gmail.com",R.drawable.img_student4));
+        students.add(new Student("Красько Илья Владимирович", "i.krasko@gmail.com",R.drawable.img_student5));
+        students.add(new Student("Синица Ольга Дмитриевна", "sini4ka@gmail.com",R.drawable.img_student6));
+        students.add(new Student("Волков Андрей Викторович", "sini4ka@gmail.com",R.drawable.img_student7));
+
+
+
     }
 
     public List<Student> getStudents(){

@@ -5,6 +5,13 @@ public class Student {
     private String mail;
     private int image;
 
+
+    public Student(String name, String mail, int image) {
+        this.name = name;
+        this.mail = mail;
+        this.image = image;
+    }
+
     public int getImage() {
         return image;
     }

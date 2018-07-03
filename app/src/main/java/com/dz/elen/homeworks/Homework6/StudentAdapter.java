@@ -1,13 +1,16 @@
 package com.dz.elen.homeworks.Homework6;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dz.elen.homeworks.R;
 
@@ -24,9 +27,6 @@ class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
     }
 
 
-//    public StudentAdapter(List<Student> students, ListOfStudentsActivity listOfStudentsActivity) {
-   // }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -35,7 +35,7 @@ class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         viewHolder.bind(this.students.get(i));
 
     }
@@ -57,10 +57,11 @@ class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHolder> {
             image = (ImageView) itemView.findViewById(R.id.image);
         }
 
-        public void bind(Student student) {
+        public void bind(final Student student) {
             name.setText(student.getName());
             mail.setText(student.getMail());
             image.setImageResource(student.getImage());
+
 
         }
     }
