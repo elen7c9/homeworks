@@ -19,7 +19,8 @@ public class ListOfStudentsActivity extends AppCompatActivity {
 
     private RecyclerView studentsRecyclerView;
     private List<Student> students;
-    RecyclerView.Adapter adapter;
+
+    StudentAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class ListOfStudentsActivity extends AppCompatActivity {
 
         adapter = new StudentAdapter(students,this);
         studentsRecyclerView.setAdapter(adapter);
+
 
     }
 

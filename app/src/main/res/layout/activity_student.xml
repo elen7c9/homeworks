@@ -11,16 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:id="@+id/imgView"/>
+        android:id="@+id/imgViewDetail"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nameView"/>
+        android:id="@+id/nameViewDetail"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mailView"/>
+        android:id="@+id/mailViewDetail"/>
 
 </LinearLayout>
