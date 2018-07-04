@@ -36,4 +36,38 @@ public class StudentsBase {
 
         return studentsBase;
     }
+
+    public  boolean addNew(Student student){
+        try {
+            students.add(0,student);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean edit(int position, Student newStudent){
+        try {
+            students.remove(position);
+            students.add(position,newStudent);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean delete(int pos){
+        try {
+            students.remove(pos);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

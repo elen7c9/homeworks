@@ -12,6 +12,9 @@ public class Student {
         this.image = image;
     }
 
+    public Student() {
+    }
+
     public int getImage() {
         return image;
     }
