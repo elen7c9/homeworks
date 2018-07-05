@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,11 +30,31 @@ public class ListOfStudentsActivity extends AppCompatActivity {
     Button saveBtn;
     ImageButton addBtn;
 
+    EditText search;
+
     StudentAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_students);
+
+         search= (EditText) findViewById(R.id.search);
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                filter(editable.toString());
+            }
+        });
 
         studentsRecyclerView = (RecyclerView) findViewById(R.id.students_recyclerview);
         studentsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,7 +71,19 @@ public class ListOfStudentsActivity extends AppCompatActivity {
             }
         });
 
+    }
 
+
+
+
+    private void filter(String text){
+        ArrayList<Student> filter = new ArrayList<>();
+        for (Student s:students){
+            if(s.getName().toLowerCase().contains(text.toLowerCase())){
+                filter.add(s);
+            }
+        }
+        adapter.filterList(filter);
     }
     private void displayDialog(){
 
@@ -86,6 +120,8 @@ public class ListOfStudentsActivity extends AppCompatActivity {
         super.onResume();
 
         studentsRecyclerView.setAdapter(adapter);
+
+
     }
 }
 

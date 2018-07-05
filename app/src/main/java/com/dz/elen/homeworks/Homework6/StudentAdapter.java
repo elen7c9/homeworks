@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.dz.elen.homeworks.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 class StudentAdapter extends RecyclerView.Adapter<MyHolder>{
@@ -59,6 +60,11 @@ class StudentAdapter extends RecyclerView.Adapter<MyHolder>{
     public int getItemCount() {
 
         return students.size();
+    }
+
+    public void filterList(ArrayList<Student> filteredList){
+        students=filteredList;
+        notifyDataSetChanged();
     }
 
     private void openStudentActivity(String name, String mail, int image, int position){
