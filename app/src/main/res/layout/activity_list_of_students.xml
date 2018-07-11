@@ -8,41 +8,13 @@
     android:orientation="vertical"
     android:focusable="true"
     android:focusableInTouchMode="true"
+
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="5dp"
-                android:hint="search..."
-            /></android.support.design.widget.TextInputLayout>
-
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/students_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
-
-
-    <ImageButton
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:id="@+id/btnAddNewStudent"
-        android:background="@drawable/add"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="35dp"
-        android:layout_marginRight="25dp"
-         />
+<fragment
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.dz.elen.homeworks.Homework6.ItemFragment"
+    tools:layout="@layout/fragment_item"
+    android:id="@+id/item_fragment"/>
 </RelativeLayout>

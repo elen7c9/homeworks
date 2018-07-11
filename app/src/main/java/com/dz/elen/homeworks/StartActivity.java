@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.dz.elen.homeworks.Homework6.ListOfStudentsActivity;
+
 public class StartActivity extends AppCompatActivity {
 
     @Override
@@ -78,6 +80,16 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, Homework5Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.myscale,R.anim.myalpha);
+            }
+        });
+
+        Button btnHomework6 = (Button) findViewById(R.id.btnHomework6);
+        btnHomework6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, ListOfStudentsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.myscale,R.anim.myalpha);
             }

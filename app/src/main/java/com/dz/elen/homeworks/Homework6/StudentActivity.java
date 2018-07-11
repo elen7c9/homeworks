@@ -2,6 +2,8 @@ package com.dz.elen.homeworks.Homework6;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +31,13 @@ public class StudentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        DetailFragment fragment = new DetailFragment();
+        fragmentTransaction.add(R.id.detail_fragment, fragment);
+        fragmentTransaction.commit();
 
         nameTxt = (TextView) findViewById(R.id.nameViewDetail);
         mailTxt = (TextView) findViewById(R.id.mailViewDetail);

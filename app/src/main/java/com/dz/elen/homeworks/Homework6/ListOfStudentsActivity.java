@@ -2,6 +2,9 @@ package com.dz.elen.homeworks.Homework6;
 
 import android.app.Dialog;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,13 +18,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
 
 import com.dz.elen.homeworks.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListOfStudentsActivity extends AppCompatActivity {
+public class ListOfStudentsActivity extends FragmentActivity {
 
     private RecyclerView studentsRecyclerView;
     private List<Student> students;
@@ -33,10 +37,21 @@ public class ListOfStudentsActivity extends AppCompatActivity {
     EditText search;
 
     StudentAdapter adapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_students);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        ItemFragment fragment = new ItemFragment();
+        fragmentTransaction.add(R.id.item_fragment, fragment);
+        fragmentTransaction.commit();
+
+
 
          search= (EditText) findViewById(R.id.search);
         search.addTextChangedListener(new TextWatcher() {
