@@ -33,7 +33,7 @@
                 android:hint="e-mail"
                 android:id="@+id/mailEditText"
                 android:text="example@mail.ru"
-                android:focusable="false">
+                >
             </EditText>
         </android.support.design.widget.TextInputLayout>
 

@@ -6,4 +6,7 @@
     <string name="temp"></string>
     <string name="load">Load image</string>
     <string name="back">BACK</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
