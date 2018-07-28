@@ -1,5 +1,7 @@
 package com.dz.elen.homeworks.HomeworkRx;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -10,34 +12,56 @@ import android.widget.TextView;
 
 import com.dz.elen.homeworks.R;
 
-public class DzRxActivity extends AppCompatActivity {
 
-     int count = 0;
+public class DzRxActivity extends FragmentActivity {
+
     Button btnClick;
-
-    TextView textView;
+    CountFragment countFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dz_rx);
+        setContentView(R.layout.activity_dzrx);
 
         btnClick = (Button)findViewById(R.id.btnClick);
+        countFragment = new CountFragment();
+
+
 
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                count++;
+                showFragment(countFragment, true);
+                countFragment.incrementValue();
             }
         });
 
-        CountFragment countFragment= new CountFragment(count);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().add(R.id.fragmCount,countFragment);
-        fragmentTransaction.commit();
+    }
 
+    private void showFragment(final Fragment fragment, boolean addToBaskStack) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.fragmentContainer, fragment, fragment.getClass().getSimpleName());
+        transaction.commit();
 
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
 
 }
