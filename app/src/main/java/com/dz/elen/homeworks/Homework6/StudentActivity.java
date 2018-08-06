@@ -32,12 +32,12 @@ public class StudentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        /*FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         DetailFragment fragment = new DetailFragment();
         fragmentTransaction.add(R.id.detail_fragment, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commit();*/
 
         nameTxt = (TextView) findViewById(R.id.nameViewDetail);
         mailTxt = (TextView) findViewById(R.id.mailViewDetail);

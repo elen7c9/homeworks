@@ -25,7 +25,9 @@
 
         <service android:name=".MyService" />
 
-        <activity android:name=".Homework6.ListOfStudentsActivity" />
+        <activity android:name=".Homework6.ListOfStudentsActivity">
+
+        </activity>>
         <activity android:name=".Homework6.StudentActivity" />
         <activity android:name=".HomeworkRx.DzRxActivity">
             <intent-filter>

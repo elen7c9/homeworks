@@ -44,14 +44,6 @@ public class ListOfStudentsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_students);
 
-       /* FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        ItemFragment fragment = new ItemFragment();
-        fragmentTransaction.add(R.id.item_fragment, fragment);
-        fragmentTransaction.commit();*/
-
-
 
          search= (EditText) findViewById(R.id.search);
         search.addTextChangedListener(new TextWatcher() {
